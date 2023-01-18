@@ -1,0 +1,48 @@
+
+<div class="outerDiv" >
+    <H1 mat-dialog-title > Update Product </H1>
+    <div mat-dialog-content >
+        <div appearance="outline" >
+            <button mat-button  (click)="imageInput.click()" >Choose Image</button>
+            <input hidden #imageInput color="primary" type="file" name="image" multiple (change)="selectImage($event)" >
+            <span *ngIf="file?.name" class="file-name">{{file?.name}} uploaded<mat-icon style="color: green;"> check_circle</mat-icon> </span><br><br>
+            <img *ngIf="file?.name" [src]="data?.imageUrl" alt="">
+
+        </div>
+        
+        <br><br>
+        <mat-form-field appearance="outline" >
+            <mat-label>Code</mat-label>
+            <input matInput [(ngModel)]="data.code" disabled >
+        </mat-form-field>
+        <br><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="data.name">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input matInput [(ngModel)]="data.description">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose an option</mat-label>
+            <mat-select [(ngModel)]="data.category" >
+              <mat-option value="Sound">Sound </mat-option>
+              <mat-option value="Laptop">Laptop </mat-option>
+              <mat-option value="PC">PC </mat-option>
+              <mat-option value="Smartphone">Smartphone </mat-option>
+              <mat-option value="Storage">Storage </mat-option>
+              <mat-option value="Camera">Camera </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <br><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="data.price">
+        </mat-form-field>
+    </div>
+    <button mat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+</div>

@@ -1,0 +1,61 @@
+html{
+    margin: 0;
+}
+.outerDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7.5vh;
+}
+table{
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+}
+
+th{
+    width: 10em;
+    text-align: center;
+}
+
+.actionTh, .actionTd{
+    text-align: center;
+    width: 8em;
+}
+
+.addbtn{
+    left:4em ;
+    width: 20%;
+    height: 4em;
+    margin: 1em ;
+    margin-right: 5em;
+    text-align: left;
+}
+
+.upperDiv{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.price{
+    align-self: center;
+   text-align: center;
+    font-size: larger;
+    padding: 2ch;
+}
+
+.search{
+    width: 100%;
+    height: 5em;
+    margin-left: 5ch;
+    margin-right: 2ch;
+    align-self: center;
+    justify-self: center;
+}
+
+img{
+    height: 15vh;
+}
+
+H1{ 
+    margin-left: 5ch;
+}

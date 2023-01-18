@@ -1,0 +1,114 @@
+<div class="shop" >
+    <mat-tab-group [color]="'warn'" mat-stretch-tabs="false" mat-align-tabs="start" dynamicHeight >
+        <mat-tab label="All" >
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card"  >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)"  >
+                                <H1>{{product.name}}</H1>
+                                <span  >{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Laptops And PCs">
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card" *ngIf="product.category=='Laptop'||product.category=='PC'" >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)" >
+                                <H1>{{product.name}}</H1>
+                                <span>{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div> 
+        </mat-tab>
+        <mat-tab label="Smartphones">
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card" *ngIf="product.category=='Smartphone'" >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)" >
+                                <H1>{{product.name}}</H1>
+                                <span>{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Sound">
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card" *ngIf="product.category=='Sound'" >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)" >
+                                <H1>{{product.name}}</H1>
+                                <span>{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        
+        <mat-tab label="Storage">
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card" *ngIf="product.category=='Storage'" >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)" >
+                                <H1>{{product.name}}</H1>
+                                <span>{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Cameras">
+            <div class="flexContainer">
+                <div *ngFor="let product of products" class="products">
+                    <mat-card class="example-card" *ngIf="product.category=='Camera'" >
+                        <img (click)="openProductPage(product)"  [src]="product.imageUrl" alt=""> 
+                        <div class="lowerCard">
+                            <mat-card-content (click)="openProductPage(product)" >
+                                <H1>{{product.name}}</H1>
+                                <span>{{product.price}} DT</span>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <a (click)="addToShopingCart(product._id)" mat-button><mat-icon>add_shopping_cart</mat-icon></a>
+                            </mat-card-actions>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        
+    </mat-tab-group>
+</div>

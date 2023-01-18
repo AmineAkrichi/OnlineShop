@@ -1,0 +1,42 @@
+html{
+    margin: 0;
+}
+.outerDiv{
+    display: flex;
+    flex-direction: column;
+}
+table{
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+}
+
+th{
+    width: 10em;
+    text-align: center;
+}
+
+.actionTh, .actionTd{
+    text-align: center;
+    width: 8em;
+}
+
+.addbtn{
+    left:4em ;
+    width: 20%;
+    height: 4em;
+    margin: 1em ;
+    margin-right: 5em;
+    text-align: left;
+}
+
+.upperDiv mat-form-field{
+    width: 65%;
+    height: 5em;
+    margin: 1em ;
+    margin-left: 3em;
+}
+
+img{
+    height: 10vh;
+}

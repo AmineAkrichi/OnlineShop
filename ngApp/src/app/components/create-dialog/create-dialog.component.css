@@ -1,0 +1,14 @@
+.outerDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    width: 30em;
+    align-self: center;
+    justify-self: center;
+}
+
+img{
+    height: 20vh;
+}

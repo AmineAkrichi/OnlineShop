@@ -1,0 +1,49 @@
+
+<div class="card" >
+    <div class="card-content">
+        <div class="header">
+            <H1 style="font-size:75px;" >Log In</H1>
+        </div>
+        <br><br>
+        <form (ngSubmit)="onLogin" name="loginForm" [formGroup]="loginForm" >
+
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="email" formControlName="email" matInput required>
+                    <mat-error *ngIf="loginForm.get('email')?.errors?.['required']" >
+                        Email address required
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('email')?.errors?.['email']" >
+                        Invalid Email
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br>
+            <div class="password-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+
+                    <mat-error *ngIf="loginForm.get('password')?.errors?.['required']" >
+                        Password required
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('password')?.errors?.['minlength']" >
+                        Invalid Password
+                    </mat-error>
+                </mat-form-field>  
+            </div>
+
+            <button mat-button class="sbmt" (click)="onLogin()">Log In</button><br><br>
+            <span>
+                Don't have an account <a href="signup">SignUp here</a>
+            </span>
+        </form>
+    </div>
+</div>
+
+

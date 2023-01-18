@@ -1,0 +1,35 @@
+mat-dialog-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+}
+
+h1{
+    color: rgb(254, 102, 0);
+}
+
+strong{
+    color: rgb(254, 102, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 5vh;
+}
+
+button{
+    width: 20ch;
+    color: rgb(254, 102, 0);
+    font-size: 20px;
+    height: 7.5vh;
+}
+
+.productPrice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 60vh;
+}

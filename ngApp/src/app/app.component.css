@@ -1,0 +1,38 @@
+html{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    scroll-behavior: smooth;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.navBar{
+    height: 10vh;
+    margin: 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.navBar1{
+    height: 10vh;
+    margin: 0;
+    margin-bottom: 5vh;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+

@@ -1,0 +1,78 @@
+.navBar{
+    margin: 0px;
+}
+
+.shop{
+    margin-top: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    z-index:-1;
+}
+.example-card {
+    width: 300px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 5vh;
+    padding-bottom: 5vh ;
+    justify-content:center;
+}
+
+button,a{
+    color: rgb(254, 102, 0);
+}
+
+H1{
+    font-size: 20px;
+}
+
+mat-card{
+    margin: 10px;
+}
+
+mat-card:hover{
+    color: rgb(254, 102, 0);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+mat-card-actions{
+    bottom: 0px;
+    right: 10px;
+    position:absolute;
+}
+
+h1{
+ 
+    font-weight: 400; 
+    font-size:20px;
+}
+
+span{
+    color: rgb(254, 102, 0); 
+    font-weight: bold; 
+    font-size:17px;
+    position: absolute;
+    bottom: 4.5vh;
+}
+
+img{
+    height: 30vh;
+    align-self: center;
+}

@@ -1,0 +1,67 @@
+
+
+<div class="outerDiv" >
+    <H1><span style="color: rgb(254, 102, 0);" >{{loggedInUser.name+" "+ loggedInUser.lastname}}</span>'s Shopping Cart </H1>
+    <div class="upperDiv">
+      <div style="display: flex;" >
+        <mat-form-field class="search" appearance="outline" >
+          <mat-label>Search</mat-label>
+          <input matInput (keyup)="applyFilter($event)" #input>
+        </mat-form-field>
+      </div>
+      <div style="display: flex;" ><span class="price" style="font-weight: bold;color: rgb(254, 102, 0);" >Total : {{this.totalPrice}} DT</span></div>
+      
+    </div>
+      
+  
+   
+    <table table mat-table [dataSource]="dataSource" matSort>
+  
+          <ng-container matColumnDef="Image">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+          <td mat-cell *matCellDef="let element"> <img [src]="element.imageUrl" alt=""> </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Code">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Code</th>
+          <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let element">{{element.name}} </td>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="Quantity">
+            <th class="actionTh" mat-header-cell *matHeaderCellDef>Quantity</th>
+            <td class="actionTd" mat-cell *matCellDef="let element let i = index"> {{this.productQuantity[i]}}</td>
+          </ng-container>
+          
+          <ng-container matColumnDef="Price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+          <td mat-cell *matCellDef="let element let i = index"> {{element.price*this.productQuantity[i]}} TND </td>
+          </ng-container>  
+
+          <ng-container matColumnDef="Action">
+          <th class="actionTh" mat-header-cell *matHeaderCellDef> Action </th>
+          <td class="actionTd" mat-cell *matCellDef="let element let i = index"> 
+              <button (click)="deteteItemFromCart(element)"  mat-button color="warn"><mat-icon>delete</mat-icon></button>  
+          </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+          <tr class="mat-row" *matNoDataRow>
+            
+            <td class="mat-cell" colspan="4"> <span *ngIf="input.value" >No data matching the filter "{{input.value}}"</span></td>
+          </tr>
+      </table>
+  
+      <mat-paginator [pageSizeOptions]="[8, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+      </mat-paginator>
+  </div>
